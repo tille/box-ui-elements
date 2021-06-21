@@ -258,8 +258,7 @@ class DraftJSMentionSelector extends React.Component<Props, State> {
             <div className={classes}>
                 {this.shouldDisplayMentionLookup() ? (
                     <div aria-live="polite" aria-atomic="true">
-                        {' '}
-                        {contacts.length} users found.{' '}
+                        {contacts.length} users found.
                     </div>
                 ) : null}
                 <SelectorDropdown
