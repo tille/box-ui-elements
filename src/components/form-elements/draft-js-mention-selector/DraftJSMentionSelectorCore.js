@@ -254,11 +254,14 @@ class DraftJSMentionSelector extends React.Component<Props, State> {
 
         const showMentionStartState = !!(onMention && activeMention && !activeMention.mentionString && isFocused);
 
-        const Tales = ({ contactsL }) => <div aria-live="polite"> {contactsL} users found. </div>;
-
         return (
             <div className={classes}>
-                {this.shouldDisplayMentionLookup() ? <Tales contacts={contacts.length} /> : null}
+                {this.shouldDisplayMentionLookup() ? (
+                    <div aria-live="polite" aria-atomic="true">
+                        {' '}
+                        {contacts.length} users found.{' '}
+                    </div>
+                ) : null}
                 <SelectorDropdown
                     onSelect={this.handleContactSelected}
                     selector={
