@@ -36,7 +36,7 @@ type MentionStartStateProps = {
 };
 
 const MentionStartState = ({ message }: MentionStartStateProps) => (
-    <div className="mention-start-state" aria-live="assertive" role="alert">
+    <div className="mention-start-state" role="alert">
         {message}
     </div>
 );
